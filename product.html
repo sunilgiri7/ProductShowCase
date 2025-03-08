@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Zectapure - Our Products</title>
+    <link rel="stylesheet" type="text/css" href="css/product_style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="py-4">
+        <div class="container">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">Z</div>
+                    <span>Zecta<span class="text-gradient">pure</span></span>
+                </a>
+                
+                <button class="mobile-menu-btn">☰</button>
+                
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="product.html" class="active">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Product Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Zectapure Medical Solutions</h1>
+            <p>Discover our comprehensive range of cutting-edge diagnostic systems and medical equipment designed for precision, reliability, and efficiency.</p>
+        </div>
+    </section>
+    
+    <!-- Products Section -->
+    <section class="py-16">
+        <div class="container">
+            <h2 class="text-center mb-8">Our Products</h2>
+            
+            <!-- Product Filters -->
+            <div class="product-filter-section">
+                <!-- Product Category Tabs -->
+                <div class="product-category-tabs">
+                    <div class="category-tab active" data-category="all">All Products</div>
+                    <div class="category-tab" data-category="diagnostic">Diagnostic Systems</div>
+                    <div class="category-tab" data-category="laboratory">Laboratory Equipment</div>
+                    <div class="category-tab" data-category="monitoring">Patient Monitoring</div>
+                    <div class="category-tab" data-category="imaging">Medical Imaging</div>
+                </div>
+            </div>
+            
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+            
+            <!-- Pagination -->
+            <div class="pagination" id="pagination">
+                <!-- Pagination will be dynamically generated -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- Call-to-Action Section -->
+    <section class="py-16" style="background-color: #1e293b; color: white;">
+        <div class="container text-center">
+            <h2>Need a Custom Solution?</h2>
+            <p>Contact our product specialists to discuss custom configurations and specific requirements for your facility.</p>
+            <a href="contact.html" class="btn btn-primary">Schedule a Consultation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">Z</div>
+                        <span>Zecta<span class="text-gradient">pure</span></span>
+                    </a>
+                    <p>Revolutionizing medical diagnostics with cutting-edge technology and innovative solutions.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/yourprofile" target="_blank" class="social-icon" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com/yourhandle" target="_blank" class="social-icon" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="social-icon" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/yourhandle" target="_blank" class="social-icon" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>123 Innovation Drive</li>
+                        <li>Boston, MA 02108</li>
+                        <li>contact@Zectapure.com</li>
+                        <li>(555) 123-4567</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Zectapure. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/product_script.js"></script>
+</body>
+</html>
