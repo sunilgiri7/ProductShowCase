@@ -61,17 +61,50 @@ p {
     padding: 0 2rem;
 }
 
+/* Animations */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  0% { opacity: 0; transform: translateX(-100%); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Animate on Scroll */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Hero Banner Slider */
 .hero-banner {
     position: relative;
     width: 100%;
-    height: 400px; /* Adjust height as needed */
+    height: 400px;
     overflow: hidden;
     border-radius: 1rem;
     margin-bottom: 2rem;
-  }
+}
   
-  .banner-slide {
+.banner-slide {
     position: absolute;
     top: 0;
     left: 0;
@@ -81,11 +114,11 @@ p {
     background-position: center;
     opacity: 0;
     transition: opacity 1s ease-in-out;
-  }
+}
   
-  .banner-slide.active {
+.banner-slide.active {
     opacity: 1;
-  }  
+}  
 
 .flex {
     display: flex;
@@ -166,6 +199,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
+    animation: fadeInDown 1s ease-out;
 }
 
 .logo {
@@ -226,6 +260,11 @@ nav a.active::after {
     font-size: 1.5rem;
     cursor: pointer;
     color: var(--dark);
+    transition: transform 0.3s ease;
+}
+
+.mobile-menu-btn:hover {
+    transform: scale(1.1);
 }
 
 /* Hero Section */
@@ -238,6 +277,7 @@ nav a.active::after {
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1.5rem;
+    animation: fadeInUp 1s ease-out;
 }
 
 .hero p {
@@ -245,6 +285,7 @@ nav a.active::after {
     max-width: 700px;
     margin: 0 auto 2rem;
     color: var(--gray);
+    animation: fadeInUp 1s ease-out;
 }
 
 /* Buttons */
@@ -280,6 +321,11 @@ nav a.active::after {
     color: white;
     transform: translateY(-2px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* CTA Button Pulse Effect */
+.cta-btn:hover {
+    animation: pulse 1s infinite;
 }
 
 /* Features Section */
@@ -321,6 +367,11 @@ nav a.active::after {
     height: 300px;
     width: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+    transform: scale(1.05);
 }
 
 .product-content {
@@ -333,6 +384,11 @@ nav a.active::after {
     border-radius: 0.5rem;
     padding: 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
 }
 
 .testimonial-author {
@@ -355,6 +411,7 @@ footer {
     background-color: var(--dark);
     color: white;
     padding: 1rem 0;
+    animation: fadeInUp 1s ease-out;
 }
 
 .footer-links h4 {
@@ -385,39 +442,33 @@ footer {
     margin-top: 1.5rem;
 }
 
-.social-links {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1.5rem;
-}
-
 .social-icon {
-    text-decoration: none; /* Removes default underline from links */
+    text-decoration: none;
 }
 
 .social-icon i {
-    font-size: 1.5rem; /* Sets icon size */
-    transition: transform 0.2s; /* Smooth transition for hover effect */
+    font-size: 1.5rem;
+    transition: transform 0.2s;
 }
 
 .social-icon:hover i {
-    transform: scale(1.1); /* Slightly enlarges icon on hover */
+    transform: scale(1.1);
 }
 
 .social-icon .fab.fa-facebook-f {
-    color: #1877f2; /* Facebook blue */
+    color: #1877f2;
 }
 
 .social-icon .fab.fa-twitter {
-    color: #1da1f2; /* Twitter blue */
+    color: #1da1f2;
 }
 
 .social-icon .fab.fa-linkedin-in {
-    color: #0077b5; /* LinkedIn blue */
+    color: #0077b5;
 }
 
 .social-icon .fab.fa-instagram {
-    color: #e1306c; /* Instagram pink */
+    color: #e1306c;
 }
 
 .copyright {
@@ -583,6 +634,7 @@ textarea {
     
     nav ul.active {
         left: 0;
+        animation: slideInLeft 0.5s ease-out;
     }
     
     .mobile-menu-btn {
@@ -607,3 +659,38 @@ textarea {
         font-size: 1rem;
     }
 }
+/* Preloader Container */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f9fafb; /* adjust background color as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  /* Animated Z Logo */
+  .loader-logo {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #3b82f6; /* primary color */
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Keyframes for spinning animation */
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    50% {
+      transform: rotate(180deg) scale(1.2);
+    }
+    100% {
+      transform: rotate(360deg) scale(1);
+    }
+  }
+  
