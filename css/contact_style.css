@@ -435,3 +435,57 @@
       font-size: 1rem;
     }
   }
+  /* Top Bar Container */
+.top-bar {
+    background-color: #35ad3f;
+    padding: 0.3rem 0;  /* Reduced padding for a slimmer appearance */
+    font-size: 0.85rem; /* Adjust font-size as needed */
+  }
+
+/* Main container for top bar content */
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px; /* Adjust max-width if needed */
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Social Icons styling */
+.top-bar .social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Contact Info styling */
+.top-bar .contact-infos {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Ensure links inherit color and remove underline */
+.top-bar a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .top-bar .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  .top-bar .social-icons,
+  .top-bar .contact-infos {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .top-bar .contact-infos span {
+    display: block;
+    margin: 0.25rem 0;
+  }
+}
