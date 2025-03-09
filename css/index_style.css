@@ -706,7 +706,7 @@ textarea {
   
   /* Contact Info styling */
   .top-bar .contact-infos {
-    display: flex;
+    /* display: flex; */
     gap: 1.5rem;
   }
   
