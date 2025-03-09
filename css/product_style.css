@@ -232,14 +232,19 @@
     background-color: var(--primary);
   }
   
-  .mobile-menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: var(--dark);
-  }
+    .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--dark);
+        transition: transform 0.3s ease;
+    }
+
+    .mobile-menu-btn:hover {
+        transform: scale(1.1);
+    }
   
   /* Hero Section */
   .hero {
@@ -652,6 +657,21 @@
       background-color: white;
       padding: 1rem;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    nav ul {
+        position: fixed;
+        top: 150px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        transition: left 0.3s ease;
+        z-index: 99;
     }
     
     .mobile-menu-btn {
