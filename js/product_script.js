@@ -2,165 +2,300 @@
 const products = [
     {
       id: 1,
-      title: "ZP-5000 Diagnostic System",
-      description: "Our flagship diagnostic system with 99.8% accuracy and comprehensive analytics capabilities.",
-      price: 12499,
-      image: "/api/placeholder/400/300",
-      category: "diagnostic",
-      badge: "Bestseller",
+      title: "Aceclofenac",
+      description:
+        "A potent non-steroidal anti-inflammatory drug (NSAID) used to alleviate pain and inflammation in conditions such as osteoarthritis and rheumatoid arthritis.",
+      price: 25,
+      image: "images/product_images/aceclofenac.jpeg",
+      category: "NSAID",
       features: [
-        "High-precision sensors",
-        "Real-time data analysis",
-        "Cloud integration"
+        "Pain relief",
+        "Reduces inflammation",
+        "Improves joint mobility"
       ]
     },
     {
       id: 2,
-      title: "ZP-3000 Compact System",
-      description: "Portable diagnostic solution ideal for clinics and mobile healthcare units.",
-      price: 8999,
-      image: "/api/placeholder/400/300",
-      category: "diagnostic",
+      title: "Azithromycin",
+      description:
+        "A broad-spectrum macrolide antibiotic effective against various bacterial infections including respiratory, skin, and soft tissue infections.",
+      price: 30,
+      image: "images/product_images/azithromycin.jpeg",
+      category: "Antibiotic",
       features: [
-        "Lightweight design",
-        "Battery operation",
-        "Wireless connectivity"
+        "Broad-spectrum activity",
+        "Once-daily dosing",
+        "Well-tolerated"
       ]
     },
     {
       id: 3,
-      title: "LabPro Analyzer",
-      description: "Advanced laboratory analyzer with multi-sample processing capabilities.",
-      price: 15750,
-      image: "/api/placeholder/400/300",
-      category: "laboratory",
-      badge: "New",
+      title: "Ceftriaxone",
+      description:
+        "A third-generation cephalosporin antibiotic used to treat a wide range of bacterial infections such as pneumonia and meningitis.",
+      price: 40,
+      image: "images/product_images/caftriaxone.jpeg",
+      category: "Antibiotic",
       features: [
-        "96-well capacity",
-        "Automated processing",
-        "Multiple test protocols"
+        "Broad-spectrum cephalosporin",
+        "Intravenous administration",
+        "Effective against gram-negative bacteria"
       ]
     },
     {
       id: 4,
-      title: "VitalTrack Monitor",
-      description: "Comprehensive patient monitoring system for critical care environments.",
-      price: 7499,
-      image: "/api/placeholder/400/300",
-      category: "monitoring",
+      title: "Cefpodoxime Proxetil",
+      description:
+        "An oral third-generation cephalosporin antibiotic ideal for treating respiratory and urinary tract infections.",
+      price: 35,
+      image: "images/product_images/cefodoxime-proxetile.jpeg",
+      category: "Antibiotic",
       features: [
-        "Multi-parameter tracking",
-        "Alert system",
-        "EHR integration"
+        "Oral administration",
+        "Broad-spectrum activity",
+        "High bioavailability"
       ]
     },
     {
       id: 5,
-      title: "ImaginScan MRI",
-      description: "High-resolution magnetic resonance imaging system with advanced image processing.",
-      price: 189000,
-      image: "/api/placeholder/400/300",
-      category: "imaging",
+      title: "Cefoperazone",
+      description:
+        "A third-generation cephalosporin antibiotic used in the treatment of various severe bacterial infections.",
+      price: 45,
+      image: "images/product_images/cefoperazone.jpeg",
+      category: "Antibiotic",
       features: [
-        "3T magnet strength",
-        "Rapid scan technology",
-        "AI-enhanced imaging"
+        "Effective against resistant bacteria",
+        "Broad-spectrum coverage",
+        "Parenteral formulation"
       ]
     },
     {
       id: 6,
-      title: "QuickScan Portable X-Ray",
-      description: "Mobile X-ray solution for bedside and field diagnostics with digital imaging.",
-      price: 42500,
-      image: "/api/placeholder/400/300",
-      category: "imaging",
+      title: "Cefpodoxime",
+      description:
+        "A cephalosporin antibiotic used for treating respiratory and skin infections, available in an oral formulation.",
+      price: 30,
+      image: "images/product_images/cefpodoxime.jpeg",
+      category: "Antibiotic",
       features: [
-        "Lightweight design",
-        "Digital image capture",
-        "Low radiation dose"
+        "Oral cephalosporin",
+        "Well-tolerated",
+        "Effective for mild to moderate infections"
       ]
     },
     {
       id: 7,
-      title: "CellView Microscope",
-      description: "Digital microscopy system with automated cell identification and counting.",
-      price: 32999,
-      image: "/api/placeholder/400/300",
-      category: "laboratory",
-      badge: "Popular",
+      title: "Ceftriaxone & Sulbactam",
+      description:
+        "A combination antibiotic that pairs ceftriaxone with sulbactam, a beta-lactamase inhibitor, to broaden its spectrum of activity.",
+      price: 50,
+      image: "images/product_images/ceftriaxone&sulbactam.jpeg",
+      category: "Antibiotic",
       features: [
-        "1000x magnification",
-        "Automated stage",
-        "Image analysis software"
+        "Enhanced bacterial coverage",
+        "Beta-lactamase inhibition",
+        "Suitable for severe infections"
       ]
     },
     {
       id: 8,
-      title: "BioSequence Analyzer",
-      description: "Next-generation DNA sequencing platform for clinical and research applications.",
-      price: 78500,
-      image: "/api/placeholder/400/300",
-      category: "laboratory",
+      title: "Ceftriaxone",
+      description:
+        "A widely used third-generation cephalosporin for treating infections such as meningitis, pneumonia, and septicemia.",
+      price: 40,
+      image: "images/product_images/ceftriaxone.jpeg",
+      category: "Antibiotic",
       features: [
-        "High-throughput processing",
-        "Multi-sample capability",
-        "Advanced data analytics"
+        "High potency",
+        "Parenteral administration",
+        "Effective against gram-negative bacteria"
       ]
     },
     {
       id: 9,
-      title: "CardioMonitor Pro",
-      description: "Advanced cardiac monitoring system with predictive analytics for early intervention.",
-      price: 18750,
-      image: "/api/placeholder/400/300",
-      category: "monitoring",
+      title: "Cyproheptadine",
+      description:
+        "An antihistamine used to relieve allergy symptoms and stimulate appetite in conditions associated with anorexia.",
+      price: 15,
+      image: "images/product_images/cyproheptadine.jpeg",
+      category: "Antihistamine",
       features: [
-        "Continuous monitoring",
-        "Arrhythmia detection",
-        "Remote monitoring capability"
+        "Relieves allergy symptoms",
+        "Appetite stimulant",
+        "Mild sedative effects"
       ]
     },
     {
       id: 10,
-      title: "UltraScan 4D",
-      description: "High-resolution 4D ultrasound system with advanced imaging capabilities.",
-      price: 62999,
-      image: "/api/placeholder/400/300",
-      category: "imaging",
-      badge: "Premium",
+      title: "Dextromethorphan",
+      description:
+        "A cough suppressant that acts on the brain to suppress the cough reflex, used in treating coughs associated with colds.",
+      price: 10,
+      image: "images/product_images/dextromethorphan.jpeg",
+      category: "Antitussive",
       features: [
-        "Real-time 4D imaging",
-        "Doppler technology",
-        "AI-assisted diagnostics"
+        "Suppresses cough reflex",
+        "Non-narcotic",
+        "Fast-acting relief"
       ]
     },
     {
-      id: 11,
-      title: "LabStation Mini",
-      description: "Compact laboratory workstation for small clinics and mobile healthcare units.",
-      price: 23500,
-      image: "/api/placeholder/400/300",
-      category: "laboratory",
-      features: [
-        "Space-efficient design",
-        "Multiple test capabilities",
-        "Quick results processing"
-      ]
-    },
-    {
-      id: 12,
-      title: "NeuraScan EEG",
-      description: "Advanced electroencephalography system for neurological diagnostics and monitoring.",
-      price: 45999,
-      image: "/api/placeholder/400/300",
-      category: "monitoring",
-      features: [
-        "128-channel recording",
-        "Wireless sensors",
-        "Pattern recognition software"
-      ]
-    }
-  ];
+        id: 11,
+        title: "Esomeprazole",
+        description:
+            "A proton pump inhibitor used to reduce stomach acid, effectively treating GERD and other acid-related disorders.",
+        price: 20,
+        image: "images/product_images/esomeprazole.jpeg",
+        category: "Acid Reducer",
+        features: [
+            "Reduces stomach acid",
+            "Relieves heartburn",
+            "Improves digestive comfort"
+        ]
+        },
+        {
+        id: 12,
+        title: "Esomeprazole Domperidone",
+        description:
+            "A combination therapy featuring a proton pump inhibitor and a prokinetic agent to manage acid reflux and enhance gastrointestinal motility.",
+        price: 25,
+        image: "images/product_images/esomeprazole-domperidone.jpeg",
+        category: "Gastrointestinal",
+        features: [
+            "Dual-action formulation",
+            "Reduces acid secretion",
+            "Enhances GI motility"
+        ]
+        },
+        {
+        id: 13,
+        title: "Levosalbutamol",
+        description:
+            "A bronchodilator that quickly relaxes airway muscles, providing rapid relief from bronchospasm in asthma and COPD.",
+        price: 15,
+        image: "images/product_images/levosalbutamol.jpeg",
+        category: "Respiratory",
+        features: [
+            "Fast-acting relief",
+            "Improves airflow",
+            "Reduces bronchospasm"
+        ]
+        },
+        {
+        id: 14,
+        title: "Mefenamic Acid",
+        description:
+            "A nonsteroidal anti-inflammatory drug (NSAID) used to relieve mild to moderate pain and reduce inflammation, especially effective for menstrual pain.",
+        price: 10,
+        image: "images/product_images/mefenamic.jpeg",
+        category: "NSAID",
+        features: [
+            "Effective pain relief",
+            "Anti-inflammatory properties",
+            "Reduces menstrual discomfort"
+        ]
+        },
+        {
+        id: 15,
+        title: "Mefzec",
+        description:
+            "A potent NSAID designed to alleviate pain and inflammation, suitable for various mild to moderate pain conditions.",
+        price: 12,
+        image: "images/product_images/mefzec.jpeg",
+        category: "NSAID",
+        features: [
+            "Rapid pain relief",
+            "Reduces inflammation",
+            "Gentle on the stomach"
+        ]
+        },
+        {
+        id: 16,
+        title: "Methylcobalamin",
+        description:
+            "An active form of vitamin B12 that supports nerve health and aids in red blood cell formation.",
+        price: 8,
+        image: "images/product_images/methylcobalamin.jpeg",
+        category: "Vitamin",
+        features: [
+            "Supports nerve function",
+            "Boosts energy levels",
+            "Essential for blood health"
+        ]
+        },
+        {
+        id: 17,
+        title: "Methylcobalamin Injection",
+        description:
+            "An injectable form of vitamin B12 for rapid correction of deficiency and improved nerve function.",
+        price: 15,
+        image: "images/product_images/methylcobalamin-injection.jpeg",
+        category: "Vitamin Injection",
+        features: [
+            "Quick absorption",
+            "Effective B12 delivery",
+            "Supports nerve health"
+        ]
+        },
+        {
+        id: 18,
+        title: "ZCID Plus",
+        description:
+            "A combination remedy formulated to alleviate common cold and flu symptoms including fever, congestion, and body aches.",
+        price: 18,
+        image: "images/product_images/zcid-plus.jpeg",
+        category: "Cold & Flu",
+        features: [
+            "Multi-symptom relief",
+            "Fast-acting formula",
+            "Combination therapy"
+        ]
+        },
+        {
+        id: 19,
+        title: "Zecrelief",
+        description:
+            "A topical analgesic designed to provide fast relief from muscular and joint pain with added anti-inflammatory benefits.",
+        price: 20,
+        image: "images/product_images/zecrelief.jpeg",
+        category: "Pain Relief",
+        features: [
+            "Topical application",
+            "Fast-acting relief",
+            "Reduces inflammation"
+        ]
+        },
+        {
+        id: 20,
+        title: "Zectavit",
+        description:
+            "A multivitamin supplement enriched with essential nutrients to support overall health, boost energy, and enhance immunity.",
+        price: 22,
+        image: "images/product_images/zectavit.jpeg",
+        category: "Supplement",
+        features: [
+            "Boosts immunity",
+            "Enhances energy",
+            "Daily nutritional support"
+        ]
+        },
+        {
+            id: 21,
+            title: "Zemicobal",
+            description:
+              "A comprehensive nutritional supplement containing methylcobalamin, alpha lipoic acid, folic acid, pyridoxine HCl, and vitamin D3. It supports nerve health, provides antioxidant protection, and promotes overall well-being.",
+            price: 30,
+            image: "images/product_images/zemicobal.jpeg",
+            category: "Nutritional Supplement",
+            features: [
+              "Enhances nerve function",
+              "Antioxidant support",
+              "Supports bone health",
+              "Helps manage neuropathy"
+            ]
+          }          
+  ];  
   
   // Global variables for pagination
   const itemsPerPage = 8;
@@ -171,7 +306,7 @@ const products = [
   function createProductCard(product) {
     return `
       <div class="product-card animate-on-scroll" data-category="${product.category}">
-        <div class="product-img-container">
+        <div class="product-img-container" onclick="openFullImage('${product.image}')">
           <img src="${product.image}" alt="${product.title}" class="product-img">
           ${product.badge ? `<div class="product-badge">${product.badge}</div>` : ''}
         </div>
@@ -187,7 +322,7 @@ const products = [
         </div>
       </div>
     `;
-  }
+  }  
   
   // Display products for current page
   function displayProducts() {
@@ -334,4 +469,20 @@ const products = [
     // Change slide every 5 seconds
     setInterval(nextSlide, 5000);
   });
+  function openFullImage(imageSrc) {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('fullImage');
+    modal.style.display = 'block';
+    modalImg.src = imageSrc;
+  }
   
+  function closeModal() {
+    const modal = document.getElementById('imageModal');
+    modal.style.display = 'none';
+  }
+  document.getElementById('imageModal').addEventListener('click', function (e) {
+    if (e.target === this) {
+      closeModal();
+    }
+  });
+    

@@ -34,22 +34,22 @@
     <!-- Slide 1 -->
     <div class="slide active" style="background-image: url('images/banner1.jpg');">
       <div class="content">
-        <h1>Zectapure Medical Solutions</h1>
-        <p>Discover our comprehensive range of cutting‑edge diagnostic systems and medical equipment designed for precision, reliability, and efficiency.</p>
+        <h1>Medicinal Mastery by Zectapure</h1>
+        <p>Explore our curated collection of high-quality, scientifically engineered medicines. Every product is crafted with precision and backed by cutting‑edge research to restore, protect, and enhance your health.</p>
       </div>
     </div>
     <!-- Slide 2 -->
     <div class="slide" style="background-image: url('images/banner2.jpg');">
       <div class="content">
-        <h1>Zectapure Medical Solutions</h1>
-        <p>Discover our comprehensive range of cutting‑edge diagnostic systems and medical equipment designed for precision, reliability, and efficiency.</p>
+        <h1>Medicinal Mastery by Zectapure</h1>
+        <p>Explore our curated collection of high-quality, scientifically engineered medicines. Every product is crafted with precision and backed by cutting‑edge research to restore, protect, and enhance your health.</p>
       </div>
     </div>
     <!-- Slide 3 -->
     <div class="slide" style="background-image: url('images/banner3.jpg');">
       <div class="content">
-        <h1>Zectapure Medical Solutions</h1>
-        <p>Discover our comprehensive range of cutting‑edge diagnostic systems and medical equipment designed for precision, reliability, and efficiency.</p>
+        <h1>Medicinal Mastery by Zectapure</h1>
+        <p>Explore our curated collection of high-quality, scientifically engineered medicines. Every product is crafted with precision and backed by cutting‑edge research to restore, protect, and enhance your health.</p>
       </div>
     </div>
   </section>
@@ -61,15 +61,25 @@
       <h2 class="text-center mb-8">Our Products</h2>
       
       <!-- Product Filters -->
-      <div class="product-filter-section animate-on-scroll">
-        <div class="product-category-tabs">
-          <div class="category-tab active" data-category="all">All Products</div>
-          <div class="category-tab" data-category="diagnostic">Diagnostic Systems</div>
-          <div class="category-tab" data-category="laboratory">Laboratory Equipment</div>
-          <div class="category-tab" data-category="monitoring">Patient Monitoring</div>
-          <div class="category-tab" data-category="imaging">Medical Imaging</div>
-        </div>
-      </div>
+        <div class="product-filter-section animate-on-scroll">
+            <div class="product-category-tabs">
+            <div class="category-tab active" data-category="all">All Products</div>
+            <!-- Use the same category names as in your product data -->
+            <div class="category-tab" data-category="NSAID">NSAID</div>
+            <div class="category-tab" data-category="Antibiotic">Antibiotic</div>
+            <div class="category-tab" data-category="Antihistamine">Antihistamine</div>
+            <div class="category-tab" data-category="Antitussive">Antitussive</div>
+            <div class="category-tab" data-category="Acid Reducer">Acid Reducer</div>
+            <div class="category-tab" data-category="Gastrointestinal">Gastrointestinal</div>
+            <div class="category-tab" data-category="Respiratory">Respiratory</div>
+            <div class="category-tab" data-category="Vitamin">Vitamin</div>
+            <div class="category-tab" data-category="Vitamin Injection">Vitamin Injection</div>
+            <div class="category-tab" data-category="Cold & Flu">Cold & Flu</div>
+            <div class="category-tab" data-category="Pain Relief">Pain Relief</div>
+            <div class="category-tab" data-category="Supplement">Supplement</div>
+            <div class="category-tab" data-category="Nutritional Supplement">Nutritional Supplement</div>
+            </div>
+        </div>  
       
       <!-- Products Grid -->
       <div class="products-grid animate-on-scroll" id="productsGrid">
@@ -120,10 +130,10 @@
         <div class="footer-links">
           <h4>Contact</h4>
           <ul>
-            <li>123 Innovation Drive</li>
-            <li>Boston, MA 02108</li>
+            <li>Nagar parishad BANDRI, district sagar</li>
+            <li>Madhya Pradesh (Proprietor archana thakur)</li>
             <li>contact@Zectapure.com</li>
-            <li>(555) 123-4567</li>
+            <li>(+91) 7898046056</li>
           </ul>
         </div>
       </div>
@@ -132,6 +142,12 @@
       </div>
     </div>
   </footer>
+
+  <!-- Full Image Modal -->
+<div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="fullImage">
+  </div>  
   
   <script src="js/product_script.js"></script>
   <!-- Intersection Observer for scroll animations -->
