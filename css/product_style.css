@@ -312,25 +312,39 @@
   
   .product-category-tabs {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
+    flex-wrap: nowrap;               /* Prevent wrapping on smaller screens */
+    gap: 0.5rem;
+    overflow-x: auto;                /* Enable horizontal scrolling */
+    padding: 0.5rem 0;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
   }
   
   .category-tab {
-    padding: 0.75rem 1.5rem;
-    background-color: white;
-    border-radius: 2rem;
+    flex: 0 0 auto;                 /* Prevent tabs from shrinking */
+    padding: 0.5rem 1rem;
+    background-color: #f1f5f9;
+    border: 1px solid #ddd;
+    border-radius: 9999px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    font-weight: 500;
+    font-size: 0.9rem;
+    white-space: nowrap;            /* Keep text on one line */
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   
+  /* Active tab styling */
   .category-tab.active {
-    background-color: var(--primary);
-    color: white;
+    background-color: #1e293b;
+    color: #fff;
+    border-color: #1e293b;
+  }
+
+  .product-category-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hover state for tabs */
+  .category-tab:hover {
+    background-color: #e2e8f0;
   }
   
   /* Products Grid & Cards */
@@ -663,13 +677,13 @@
   }
   
   .banner-slider.alternative .content h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin-bottom: 20px;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
   }
   
   .banner-slider.alternative .content p {
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-shadow: 1px 1px 6px rgba(0,0,0,0.8);
   }
   /* Modal container (hidden by default) */
