@@ -382,7 +382,6 @@
     .top-bar .container {
       flex-direction: column;
       text-align: center;
-      gap: 0.5rem;
     }
     
     .top-bar .social-icons,
