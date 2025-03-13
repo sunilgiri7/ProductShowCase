@@ -619,7 +619,7 @@ textarea {
     
     nav ul {
         position: fixed;
-        top: 100px;
+        top: 10px;
         left: -100%;
         width: 100%;
         height: calc(100vh - 70px);

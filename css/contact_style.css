@@ -401,7 +401,7 @@
     
     nav ul {
       position: fixed;
-      top: 230px;
+      top: 100px;
       left: -100%;
       width: 100%;
       height: calc(100vh - 70px);

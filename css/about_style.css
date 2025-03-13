@@ -549,7 +549,7 @@ footer {
     
     nav ul {
         position: fixed;
-        top: 220px;
+        top: 84px;
         left: -100%;
         width: 100%;
         height: calc(100vh - 70px);
