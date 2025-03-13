@@ -3,9 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore Zectapure's premium pharmaceutical products including NSAIDs, Antibiotics, Vitamins, and more. High-quality, scientifically engineered medicines for optimal health.">
+  <meta name="keywords" content="Zectapure, pharmaceutical products, Aceclofenac, Azithromycin, Ceftriaxone, antibiotics, NSAIDs, vitamins, supplements, healthcare">
+  <!-- Mobile optimization -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Specify language -->
+  <meta http-equiv="Content-Language" content="en">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.zectapure.com/product.html">
+  <meta property="og:title" content="Zectapure Healthcare Products - Premium Pharmaceutical Solutions">
+  <meta property="og:description" content="Explore Zectapure's premium pharmaceutical products including NSAIDs, Antibiotics, Vitamins, and more. High-quality, scientifically engineered medicines.">
+  <meta property="og:image" content="https://www.zectapure.com/images/product_images/logo.jpeg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.zectapure.com/product.html">
+  <meta property="twitter:title" content="Zectapure Healthcare Products - Premium Pharmaceutical Solutions">
+  <meta property="twitter:description" content="Explore Zectapure's premium pharmaceutical products including NSAIDs, Antibiotics, Vitamins, and more. High-quality, scientifically engineered medicines.">
+  <meta property="twitter:image" content="https://www.zectapure.com/images/product_images/logo.jpeg">
+  <link rel="canonical" href="https://www.zectapure.com/product.html" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20fill='%233b82f6'/%3E%3Ctext%20x='50%25'%20y='55%25'%20dominant-baseline='middle'%20text-anchor='middle'%20fill='white'%20font-size='70'%3EZ%3C/text%3E%3C/svg%3E">
-  <title>Zectapure - Our Products</title>
+  <title>Zectapure Healthcare Products - NSAID, Antibiotics, Vitamins & More | Premium Pharmaceutical Solutions</title>
   <link rel="stylesheet" type="text/css" href="css/product_style.css" />
 </head>
 <body>
@@ -59,10 +79,32 @@
       </div>
     </div>
   </header>
+
+  <nav id="breadcrumb-container" class="custom-breadcrumbs custom-hidden" aria-label="breadcrumbs">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a href="index.html" itemprop="item">
+          <span itemprop="name">Home</span>
+        </a>
+        <meta itemprop="position" content="1" />
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="custom-separator">/</li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a href="product.html" itemprop="item">
+          <span itemprop="name">Products</span>
+        </a>
+        <meta itemprop="position" content="2" />
+      </li>
+      <li id="custom-category-breadcrumb">
+        <span class="custom-separator">/</span>
+        <span id="custom-category-name"></span>
+      </li>
+    </ol>
+  </nav>  
   
   <section class="banner-slider alternative">
     <!-- Slide 1 -->
-    <div class="slide active" style="background-image: url('images/banner1.jpg');">
+    <div class="slide active" style="background-image: url('images/banner1.jpg');" aria-label="Featured medical products banner">
       <div class="content">
         <h1>Medicinal Mastery by Zectapure</h1>
         <p>Explore our curated collection of high-quality, scientifically engineered medicines. Every product is crafted with precision and backed by cutting‑edge research to restore, protect, and enhance your health.</p>
@@ -184,7 +226,7 @@
     <img class="modal-content" id="fullImage">
   </div>  
   
-  <script src="js/product_script.js"></script>
+  <script src="js/product_script.js" defer></script>
   <!-- Intersection Observer for scroll animations -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -202,5 +244,71 @@
       });
     });
   </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Organization",
+      "name": "Zectapure",
+      "url": "https://www.zectapure.com",
+      "logo": "https://www.zectapure.com/images/product_images/logo.jpeg",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+917898046056",
+        "contactType": "customer service",
+        "email": "zectapure@gmail.com"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "BANDRI, district sagar",
+        "addressRegion": "Madhya Pradesh",
+        "addressCountry": "India"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "Product",
+          "position": 1,
+          "name": "Aceclofenac",
+          "description": "A potent non-steroidal anti-inflammatory drug (NSAID) used to alleviate pain and inflammation in conditions such as osteoarthritis and rheumatoid arthritis.",
+          "image": "https://www.zectapure.com/images/product_images/aceclofenac.jpeg",
+          "category": "NSAID",
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock"
+          }
+        },
+        {
+          "@type": "Product",
+          "position": 2,
+          "name": "Azithromycin",
+          "description": "A broad-spectrum macrolide antibiotic effective against various bacterial infections including respiratory, skin, and soft tissue infections.",
+          "image": "https://www.zectapure.com/images/product_images/azithromycin.jpeg",
+          "category": "Antibiotic",
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock"
+          }
+        },
+        {
+          "@type": "Product",
+          "position": 3,
+          "name": "Ceftriaxone",
+          "description": "A third-generation cephalosporin antibiotic used to treat a wide range of bacterial infections such as pneumonia and meningitis.",
+          "image": "https://www.zectapure.com/images/product_images/caftriaxone.jpeg",
+          "category": "Antibiotic",
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      ]
+    }
+    </script>
 </body>
 </html>

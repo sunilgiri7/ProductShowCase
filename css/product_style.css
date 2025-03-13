@@ -802,3 +802,16 @@
     cursor: pointer;
   }
   
+  .custom-hidden {
+    display: none;
+  }
+  
+  .custom-breadcrumbs {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .custom-separator {
+    margin: 0 5px;
+  }
+  

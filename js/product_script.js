@@ -307,12 +307,13 @@ const products = [
     return `
       <div class="product-card animate-on-scroll" data-category="${product.category}">
         <div class="product-img-container" onclick="openFullImage('${product.image}')">
-          <img src="${product.image}" alt="${product.title}" class="product-img">
+          <img src="${product.image}" alt="${product.title} - ${product.category} by Zectapure - ${product.features[0]}" class="product-img" loading="lazy">
           ${product.badge ? `<div class="product-badge">${product.badge}</div>` : ''}
         </div>
         <div class="product-content">
-          <h3 class="product-title">${product.title}</h3>
-          <p class="product-description">${product.description}</p>
+          <h3 class="product-title"><span itemprop="name">${product.title}</span></h3>
+          <p class="product-description" itemprop="description">${product.description}</p>
+          <div itemprop="category" content="${product.category}" style="display: none;">${product.category}</div>
           <ul class="product-features">
             ${product.features.map(feature => `<li>${feature}</li>`).join('')}
           </ul>
@@ -322,7 +323,7 @@ const products = [
         </div>
       </div>
     `;
-  }  
+  }
   
   // Display products for current page
   function displayProducts() {
@@ -486,3 +487,99 @@ const products = [
     }
   });
     
+// Add this to your product_script.js to enable category-specific URLs
+function initializeCategoryPages() {
+  // Get URL parameters
+  const urlParams = new URLSearchParams(window.location.search);
+  const categoryParam = urlParams.get('category');
+  
+  // If category parameter exists, select that category tab and filter products
+  if (categoryParam) {
+    const categoryTabs = document.querySelectorAll('.category-tab');
+    categoryTabs.forEach(tab => {
+      if (tab.getAttribute('data-category').toLowerCase() === categoryParam.toLowerCase()) {
+        tab.click(); // Trigger the click event to activate this tab
+      }
+    });
+    
+    // Update page title and meta description based on category
+    updateMetaForCategory(categoryParam);
+  }
+}
+
+function updateMetaForCategory(category) {
+  // Category-specific meta information
+  const metaInfo = {
+    'nsaid': {
+      title: 'Zectapure NSAIDs - Premium Pain Relief & Anti-inflammatory Medications',
+      description: 'Discover Zectapure\'s range of high-quality NSAIDs including Aceclofenac and Mefenamic Acid for effective pain and inflammation management.'
+    },
+    'antibiotic': {
+      title: 'Zectapure Antibiotics - Advanced Bacterial Infection Treatments',
+      description: 'Explore Zectapure\'s comprehensive antibiotic portfolio including Azithromycin, Ceftriaxone, and other effective treatments for bacterial infections.'
+    },
+    // Add other categories as needed
+  };
+  
+  // Default meta info if category not found
+  const defaultMeta = {
+    title: 'Zectapure Healthcare Products - Premium Pharmaceutical Solutions',
+    description: 'Explore Zectapure\'s premium pharmaceutical products including NSAIDs, Antibiotics, Vitamins, and more.'
+  };
+  
+  // Get meta info for the category, or use default
+  const meta = metaInfo[category.toLowerCase()] || defaultMeta;
+  
+  // Update document title and meta description
+  document.title = meta.title;
+  const metaDescription = document.querySelector('meta[name="description"]');
+  if (metaDescription) {
+    metaDescription.setAttribute('content', meta.description);
+  }
+}
+
+// Add event listeners to category tabs to update URL
+document.querySelectorAll('.category-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    const category = tab.getAttribute('data-category');
+    if (category !== 'all') {
+      // Update URL with category parameter without reloading the page
+      const url = new URL(window.location);
+      url.searchParams.set('category', category);
+      window.history.pushState({}, '', url);
+      
+      // Update meta information
+      updateMetaForCategory(category);
+    } else {
+      // Remove category parameter for "All Products"
+      const url = new URL(window.location);
+      url.searchParams.delete('category');
+      window.history.pushState({}, '', url);
+      
+      // Reset to default meta
+      updateMetaForCategory('all');
+    }
+  });
+});
+
+function updateBreadcrumbs() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const category = urlParams.get('category');
+  
+  if (category) {
+    // Show the entire breadcrumbs navigation if a category exists.
+    const breadcrumbContainer = document.getElementById('breadcrumb-container');
+    breadcrumbContainer.classList.remove('custom-hidden');
+    
+    // Update the category name in the breadcrumbs.
+    document.getElementById('custom-category-name').textContent = category;
+  }
+}
+
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', function() {
+  // Add the new initialization
+  initializeCategoryPages();
+  updateBreadcrumbs
+});
